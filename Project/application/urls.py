@@ -34,6 +34,8 @@ urlpatterns = [
     
     path('delete/', views.delete, name='delete'),
     
+    path('update/', views.update, name='update'),
+    
     path('updatefood/', views.updatefood, name='updatefood'),
     
     path('updaterest/', views.updaterest, name='updaterest'),

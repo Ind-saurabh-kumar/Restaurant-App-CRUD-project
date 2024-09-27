@@ -28,9 +28,12 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function() {
     function choiceselect() {
         var optionchoice = document.getElementById('choice').value;
-        var container = document.getElementById('changeforms');
+        var container = document.getElementById('forminp');
+        const form = document.getElementById('changeforms');
 
         if (optionchoice == 'food') {
+
+            form.action='../updatefood/';
             container.innerHTML =
                 `   
                     <h2>Food Data Update</h2>
@@ -40,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <button type='submit'>Submit</button>
                     `;
         } else {
+            form.action="../updaterest/"
             container.innerHTML =
                 `   
                     <h2>Restaurant Data Update</h2>

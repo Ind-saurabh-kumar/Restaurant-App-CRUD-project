@@ -4,258 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display</title>
-
-    <style>
-        .body{
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        section1{
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .sec1div{
-            height: 90%;
-            width: 90%;
-            border: 2px solid goldenrod;
-            background-color: rgb(61, 61, 61);
-            border-radius: 20px;
-            box-shadow: 6px 8px 95px gold;
-        }
-        .heading{
-            height:10%;
-        }
-        .heading h1{
-            font-size:30px;
-            color: white;
-            text-align: center;
-        }
-        .searchdiv{
-            height: 8%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        form{
-            height:100%;
-            width: 80%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        form select{
-            height: 60%;
-            width: 20%;
-            border-radius: 25px;
-            padding: 0px 10px 0px 10px;
-            cursor: pointer;
-        }
-        form #inputCont{
-            height: 60%;
-            width: 55%;
-            
-        }
-
-        form input{
-            height:100%;
-            width: 95%;
-            font-size: 15px;
-            border-radius: 25px;
-            padding: 0px 10px 0px 15px;
-        }
-
-        form #selectloc{
-            height:100%;
-            width: 95%;
-            font-size: 15px;
-            border-radius: 25px;
-            padding: 0px 10px 0px 15px;
-        }
-        form button{
-            height: 60%;
-            width: 20%;
-            border-radius: 25px;
-            padding: 0px 10px 0px 10px;
-            cursor: pointer;
-            font-size: 15px;
-        }
-        .sec1div2{
-            height: 70% ;
-            width: 100%;
-            display: flex;
-           
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            margin: 30px 0 0 0;
-        }
-
-        .sec1div2left{
-            height: 100%;
-            width: 60%;
-            background-color: rgb(45, 41, 36);
-            box-shadow: 8px 5px 90px  antiquewhite;
-            border-radius: 10px;
-            
-            
-        }
-
-        .tablecont{
-            overflow: scroll;
-        }
-
-        table{
-            width: 100%;
-            color: white;
-            border-collapse: collapse;
-
-        }
-        th{ 
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        
-        }
-
-        td{  
-            height: 25px;
-           
-            border: 2px solid rgb(176, 169, 24);
-            text-align: left;  
-            padding-left:6em;
-              
-        }
-
-        tr{ 
-            text-align: center;
-            margin: 2px 0 0 0;
-            height: 25px;
-        }
-
-       
-        
-
-        .sec1div2right{
-            height: 100%;
-            width: 28%;
-            background-color: rgb(42, 38, 33);
-            box-shadow: 8px 5px 90px  rgb(174, 157, 133);
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-           
-        }
-
-        .linka{
-            height: 10%;
-            width: 90%;
-            font-size: 20px;
-            color: white;
-            text-decoration: none;
-            background-color: rgb(55, 49, 41);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 25px;
-            
-        }
-
-        .msg{
-            height: 450px;
-            font-size: 35px;
-            color: red;
-            display: flex;
-            align-items: center;
-            margin: 0 0 0 15%;
-            position:absolute;
-        }
-
-
-        .leftcont{
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .choicediv {
-            height: 10%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .choicediv select{
-            height: 70%;
-            width: 40%;
-            border-radius: 25px;
-            
-
-        }
-
-        .leftformdiv{
-            height: 80%;
-            width: 100%;
-            padding-bottom: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .leftformdiv form{
-            height: 80%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .leftformdiv form h2{
-            font-size: 30px;
-            color: gold;
-            
-        }
-
-        .leftformdiv form input{
-            height: 10%;
-            width: 70%;
-            
-        }
-
-        
-
-       
-
-        .leftformdiv form button{
-            height: 10%;
-            width: 40%;
-        }
-
-
-    
-
-       
-
-        
-
-
-    </style>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
 </head>
 <body>
 
@@ -298,7 +48,7 @@
 
                         <div class="choicediv">
                             <select name="option" id="choice">
-                                <option value="None">Select the option</option>
+                                <option value="None">Select the option to Update...</option>
                                 <option value="rest">Restaurant Data Update</option>
                                 <option value="food">Food Data Update</option>
                             </select>
@@ -306,15 +56,13 @@
 
                         <div class="leftformdiv" id='changeformdiv'>
 
-                            <form id='changeforms' action="" method="POST" >
-                                {% csrf_token %}
+                            <form id='changeforms' method="POST"  >
+                                {% csrf_token%}
+
+                                <div id="forminp">
+
+                                </div>
                                 
-
-
-
-
-
-
                             </form>
                             
                             
