@@ -156,12 +156,11 @@ tr{
     font-size: 20px;
     color: white;
     text-decoration: none;
-    background-color: rgb(55, 49, 41);
+    background-color: rgb(117, 94, 63);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 25px;
-    
+    border-radius: 25px; 
 }
 
 .msg{
@@ -170,7 +169,7 @@ tr{
     color: rgb(220, 52, 10);
     display: flex;
     align-items: center;
-    margin: 0 0 0 15%;
+    margin: 0 0 0 10%;
     position:absolute;
 }
 
@@ -180,9 +179,11 @@ tr{
     color: rgb(70, 220, 10);
     display: flex;
     align-items: center;
-    margin: 0 0 0 15%;
+    margin: 0 0 0 10%;
     position:absolute;
 }
+
+
 
 /* ********************************************************************** */
 

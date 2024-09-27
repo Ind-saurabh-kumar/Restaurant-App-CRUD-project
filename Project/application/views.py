@@ -103,8 +103,9 @@ def displayfood(request):
 
 def display(request):
     title="Home"
+    text="Welcome to Restaurant Application.."
     locations = Restaurant.objects.values('resLocation').distinct()
-    return render(request, 'display.html', {'locations':locations, 'title':title})
+    return render(request, 'display.html', {'locations':locations, 'title':title, 'text':text})
 
 
 def search(request):
